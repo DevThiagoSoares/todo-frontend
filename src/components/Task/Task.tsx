@@ -4,6 +4,7 @@ import styles from "./task.module.css";
 interface TaskPros {
   id: string;
   title: string;
+  isCompleted: boolean;
   completeTask: (id: string) => void;
   removeTask: (id: string) => void;
 }
@@ -12,6 +13,7 @@ export default function Task({
   title,
   completeTask,
   id,
+  isCompleted,
   removeTask,
 }: TaskPros) {
   return (
@@ -22,6 +24,7 @@ export default function Task({
           type="checkbox"
           id="task"
           name="task"
+          checked={isCompleted}
           onClick={() => completeTask(id)}
         />
         <label htmlFor="task">{title}</label>
