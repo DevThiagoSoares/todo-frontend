@@ -3,7 +3,6 @@ import { ClipboardText, PlusCircle } from "phosphor-react";
 import styles from "./app.module.css";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import Task from "./components/Task/Task.tsx";
-import { v4 as uuidv4 } from "uuid";
 import { createTodo, deleteTodo, getTodos, isCompleted, TodoResponse } from "./api/todo.ts";
 
 
